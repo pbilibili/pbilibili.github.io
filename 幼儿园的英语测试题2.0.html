@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>幼儿园英语测试题</title>
+	<head>
+		<script>
+    		var b = 0;
+		</script>
+		<script>
+			function t(aaa) {
+		//创建一个新的h3元素
+   		var newElem = document.createElement("h3");
+		//并提供一些内容
+   		var newContent = document.createTextNode(aaa+":正确");
+		//将文本节点添加到新创建的h3
+   		newElem.appendChild(newContent);
+
+		//将新创建的元素及其内容添加到DOM中
+   		document.body.appendChild(newElem);
+			}
+			function f(bbb) {
+			//创建一个新的h3元素
+   		var newElem = document.createElement("h3");
+		//并提供一些内容
+   		var newContent = document.createTextNode(bbb+":错误");
+		//将文本节点添加到新创建的h3
+   		newElem.appendChild(newContent);
+
+		//将新创建的元素及其内容添加到DOM中
+   		document.body.appendChild(newElem);
+			}
+		</script>
+		<style type="text/css">
+			.l{
+				color: blue;
+			}
+		</style>
+		<script>
+			function s() {
+				//填写姓名的函数
+				var name = prompt('请输入您的姓名：','someone');
+					if(name != null && name != ''){document.getElementById('x').innerHTML = '姓名：'+name}
+						else {s()}
+				}
+		</script>
+		<script>
+			function sss() {
+				var jd = prompt('请将答案输入在下面：','');
+					if(jd != null && jd != '' && jd == '2/9'){
+						t(11);b += 10
+					}
+					else{
+						f(11)
+					}
+				}
+		</script>
+		<input type="button" onclick="s()" value="填写姓名">
+		<h2 id="x" class="aa"></h2>
+		<i>请先填写姓名再答题</i>
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+		<style type="text/css">
+			.aa{
+				color: blue;
+			}
+		</style>
+		<!--按钮的CSS-->
+		<style>
+			.a {
+	   		height: 90px;
+      		width: 90px;
+				background: green;
+				background: -webkit-linear-gradient(green,lightblue);
+				background: -ms-linear-gradient(green, lightblue);
+				background: linear-gradient(green, lightblue);
+				border: white;
+				transition: all 0.8s;
+			}
+			.a:hover{
+				height: 100px;
+      		width: 100px;
+			}
+			.a:hover{
+				box-shadow: 0px 0px 10px 6px rgb(0,0,0,0.3)
+			}
+		</style>
+		<style>
+			.b {
+	   		height: 90px;
+	   		width: 180px;
+				background: green;
+				background: -webkit-linear-gradient(green, lightblue);
+				background: -ms-linear-gradient(green, lightblue);
+				background: linear-gradient(green, lightblue);
+				border: white;
+				transition: all 0.8s;
+			}
+			.b:hover{
+				height: 100px;
+      		width: 190px
+			}
+			.b:hover{
+				box-shadow: 0px 0px 10px 6px rgb(0,0,0,0.3)
+			}
+		</style>
+
+	</head>
+	<body>
+		<!--HTML-->
+		<h1>一.选择题</h1>
+		<i class="fa fa-apple" style="font-size:36px"><br>
+		<a name="1">1.这是___</a>
+		<br>
+		<br>
+		<input type="button" class="b" onclick="t(1);b += 10" value="apple">
+		<input type="button" class="b" onclick="f(1);b -= 5" value="pen">
+		<br>
+		<br>
+		<br>
+		<a name="2">2.read book的中文是___</a>
+		<br>
+		<br>
+		<input type="button" class="b" onclick="t(2);b += 10" value="读书">
+		<input type="button" class="b" onclick="f(2);b -= 5" value="拉屎">
+		<input type="button" class="b" onclick="f(2);b -= 5" value="不知道">
+		<br>
+		<br>
+		<br>
+		<script>
+			//将变量a的值设为当前时间
+    		var a = new Date();
+		</script>
+		<!--HTML-->
+		<a name="3">3.黄色的英文是___</a>
+		<br>
+		<br>
+		<br>
+		<input type="button" class="b" onclick="t(3);b += 10" value="yellow">
+		<input type="button" class="b" onclick="f(3);b -= 5" value="yallow">
+		<input type="button" class="b" onclick="f(3);b -= 5" value="yollow">
+		<input type="button" class="b" onclick="f(3);b -= 5" value="red">
+		<br>
+		<br>
+		<br>
+		<a name="4">4.孩子的英文是___</a>
+		<br>
+		<br>
+		<br>
+		<input type="button" class="b" onclick="f(4);b -= 5" value="woman">
+		<input type="button" class="b" onclick="t(4);b += 10" value="kid">
+		<input type="button" class="b" onclick="f(4);b -= 5" value="kidding">
+		<input type="button" class="b" onclick="f(4);b -= 5" value="i don't no">
+		<br>
+		<br>
+		<br>
+		<a name="5">5."clever" is a ___</a>
+		<br>
+		<br>
+		<input type="button" class="b" onclick="F(5);b += 10" value="pronoun">
+		<input type="button" class="b" onclick="F(5);b += 10" value="verb">
+		<input type="button" class="b" onclick="t(5);b += 10" value="abverb">
+		<input type="button" class="b" onclick="t(5);b += 10" value="abjective">
+		<br>
+		<br>
+		<br>
+		<h1>二.判断题</h1>
+		<a name="6">1.you are very old</a>
+		<br>
+		<br>
+		<input type="button" class="a" onclick="t(6);b += 10" value="F">
+		<input type="button" class="a" onclick="f(6);b -= 5" value="T">
+		<br>
+		<br>
+		<br>
+		<a name="7">2.pen is food</a>
+		<br>
+		<br>
+		<input type="button" class="a" onclick="t(7);b += 10" value="F">
+		<input type="button" class="a" onclick="f(7);b -= 5" value="T">
+		<br>
+		<br>
+		<a name="8">3.hi的中文是你好</a>
+		<br>
+		<br>
+		<input type="button" class="a" onclick="f(8);b -= 5" value="F">
+		<input type="button" class="a" onclick="t(8);b += 10" value="T">
+		<br>
+		<br>
+		<br>
+		<a name="9">4.这是幼儿园的英语测试题</a>
+		<br>
+		<br>
+		<input type="button" class="a" onclick="f(9);b -= 5" value="F">
+		<input type="button" class="a" onclick="t(9);b += 10" value="T">
+		<br>
+		<br>
+		<br>
+		<a name="10">5."pen" is a noun</a>
+		<br>
+		<br>
+		<input type="button" class="a" onclick="f(10);b -= 5" value="F">
+		<input type="button" class="a" onclick="t(10);b += 10" value="T">
+		<br>
+		<br>
+		<br>
+		<h1>三.附加题</h1>
+		<p>已知x=0.222的循环，x=()/()</p>
+		<br>
+		<br>
+		<input type="button" class="a" onclick="sss()" value="解答">
+		<br>
+		<br>
+		<br>
+		<!--点击按钮显示当前时间(变量a)和分数(变量b)-->
+		<h6><input type="button" onclick="alert(a)" value="当前时间"></h6>
+		<h6><input type="button" onclick="alert(b)" value="分数"></h6>
+		<a href="#1">题目</a>
+ 	</body>
+</html>
+
+

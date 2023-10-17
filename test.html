@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>not stop</title>
+</head>
+<body id="a">
+    <style>
+        body{
+            background: lightblue;
+        }
+        button{
+            background-color: aquamarine;
+            border-radius: 100%;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+    <button onclick="func()"></button>
+    <script>
+        function rcolor(){
+            return "#" + Math.random().toString(16).slice(2,8).padEnd(6,"0")
+        }
+        function func(){
+            document.getElementById('a').style.background = rcolor()
+        }
+        setInterval(() => {
+            func()
+        }, 900);
+    </script>
+</body>
+</html>

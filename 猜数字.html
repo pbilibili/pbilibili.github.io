@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猜数字</title>
+</head>
+<body>
+    <style>
+        button{
+             border-radius: 60px;
+             color: rgb(97,97,15);
+             background-color: skyblue;
+             height: auto;
+             width: 100;
+             border: none;
+        }
+    </style>
+    <h1>猜数字</h1>
+    <button onclick="typ=1;number=rnum()">单人模式</button>
+    <button onclick="typ=2;pep=1">双人模式</button>
+    <input value="" id="input" type="text" />
+    <button onclick="ok()">确定</button>
+    <script>
+        function ok() {
+            if (typ==1) {
+                p1();
+            };
+            if (typ==2) {
+                p2();
+            };
+        };
+        function p2() {
+            if (pep==1) {
+                number=document.getElementById("input").value
+                number=number*1
+                pep=2
+            }else if (pep==2) {
+                var i = 1;
+                var s = 0;
+                var ss = 0;
+                var n = [parseInt(number/100),parseInt(number/10)-parseInt(number/100)*10,number%10];
+                var cnumber = document.getElementById("input").value;
+                if (n.indexOf(parseInt(cnumber/100))!=-1) {
+                    ss=ss+1;
+                };
+                if (n.indexOf(parseInt(cnumber/10)-parseInt(cnumber/100)*10)!=-1) {
+                    ss=ss+1;
+                };
+                if (n.indexOf(cnumber%10)!=-1) {
+                    ss=ss+1;
+                };
+                if (ss==0) {
+                    document.getElementById("ts2").innerHTML = '0';
+                };
+                if (ss==1) {
+                    document.getElementById("ts2").innerHTML = '1';
+                };
+                if (ss==2) {
+                    document.getElementById("ts2").innerHTML = '2';
+                };
+                if (ss==3) {
+                    document.getElementById("ts2").innerHTML = '3';
+                };
+                if (parseInt(cnumber/100)==parseInt(number/100)) {
+                    s=s+1;
+                };
+                if (parseInt(cnumber/10)-parseInt(cnumber/100)*10==parseInt(number/10)-parseInt(number/100)*10) {
+                    s=s+1;
+                };
+                if (cnumber%10==number%10) {
+                    s=s+1;
+                };
+                if (s==0) {
+                    document.getElementById("ts1").innerHTML = '0';
+                };
+                if (s==1) {
+                    document.getElementById("ts1").innerHTML = '1';
+                };
+                if (s==2) {
+                    document.getElementById("ts1").innerHTML = '2';
+                };
+                if (s==3) {
+                    document.getElementById("ts1").innerHTML = '全对';
+                    document.getElementById("ts2").innerHTML = '全对';
+                };
+            }
+        };
+        function p1() {
+            var i = 1;
+            var s = 0;
+            var ss = 0;
+            var n = [parseInt(number/100),parseInt(number/10)-parseInt(number/100)*10,number%10];
+            var cnumber = document.getElementById("input").value;
+            if (n.indexOf(parseInt(cnumber/100))!=-1) {
+                ss=ss+1;
+            };
+            if (n.indexOf(parseInt(cnumber/10)-parseInt(cnumber/100)*10)!=-1) {
+                ss=ss+1;
+            };
+            if (n.indexOf(cnumber%10)!=-1) {
+                ss=ss+1;
+            };
+            if (ss==0) {
+                document.getElementById("ts2").innerHTML = '0';
+            };
+            if (ss==1) {
+                document.getElementById("ts2").innerHTML = '1';
+            };
+            if (ss==2) {
+                document.getElementById("ts2").innerHTML = '2';
+            };
+            if (ss==3) {
+                document.getElementById("ts2").innerHTML = '3';
+            };
+            if (parseInt(cnumber/100)==parseInt(number/100)) {
+                s=s+1;
+            };
+            if (parseInt(cnumber/10)-parseInt(cnumber/100)*10==parseInt(number/10)-parseInt(number/100)*10) {
+                s=s+1;
+            };
+            if (cnumber%10==number%10) {
+                s=s+1;
+            };
+            if (s==0) {
+                document.getElementById("ts1").innerHTML = '0';
+            };
+            if (s==1) {
+                document.getElementById("ts1").innerHTML = '1';
+            };
+            if (s==2) {
+                document.getElementById("ts1").innerHTML = '2';
+            };
+            if (s==3) {
+                document.getElementById("ts1").innerHTML = '全对';
+                document.getElementById("ts2").innerHTML = '全对';
+            };
+            
+        };
+        function rnum() {
+            var rn = Math.floor((Math.random() * 600) + 111);
+            return rn;
+        };
+    </script>
+    <h2>位置对:</h2><h2 id="ts1"></h2><h2>数字对:</h2><h2 id="ts2"></h2>
+    <h4>(玩完一局请再按下要玩的模式已重置)</h4>
+</body>
+</html>

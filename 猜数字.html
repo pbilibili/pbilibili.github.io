@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>猜数字</title>
+    <h1>猜数字(三位数)</h1>
 </head>
-<body>
+<body id="a">
     <style>
         button{
              border-radius: 60px;
@@ -16,7 +17,7 @@
              border: none;
         }
     </style>
-    <h1>猜数字</h1>
+    
     <button onclick="typ=1;number=rnum()">单人模式</button>
     <button onclick="typ=2;pep=1">双人模式</button>
     <input value="" id="input" type="text" />
@@ -141,7 +142,21 @@
             var rn = Math.floor((Math.random() * 600) + 111);
             return rn;
         };
+        function rcolor(){
+            return "#" + Math.random().toString(16).slice(2,8).padEnd(6,"0")
+        }
+        function func(){
+            document.getElementById('a').style.background = rcolor()
+        }
+        setInterval(() => {
+            func()
+        }, 900);1
     </script>
+    <style>
+        body{
+            background: lightblue;
+        }
+    </style>
     <h2>位置对:</h2><h2 id="ts1"></h2><h2>数字对:</h2><h2 id="ts2"></h2>
     <h4>(玩完一局请再按下要玩的模式已重置)</h4>
 </body>

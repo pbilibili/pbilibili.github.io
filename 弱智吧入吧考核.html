@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>弱智吧入吧考核</title>
+  <style>
+   .center-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    #passwordInput {
+      border-bottom: 1px solid black;
+    }
+    .transparentButton {
+      background-color: transparent;
+      border: none;
+      color: black;
+    }
+  </style>
+  </style>
+</head>
+
+<body>
+  <div class="center-container">
+    <p id="text">Enter password:</b></p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <input type="text" id="passwordInput" value="">
+    <br>
+    <button class="transparentButton" onclick="ok()"><b><font color="green">ok</font></b></button>
+  </div>
+  <script>
+    p=0
+    function ok() {
+        if (p==0 && document.getElementById("passwordInput").value=="password") {
+            p=p+1
+            document.getElementById("text").innerHTML = '<b><font color="red">password is incorrect</font></b>'
+            document.getElementById("passwordInput").value = ''
+        }
+        if (p==1 && document.getElementById("passwordInput").value=="incorrect") {
+            p=p+1
+            document.getElementById("text").innerHTML = '<b><font color="red">Try again</font></b>'
+            document.getElementById("passwordInput").value = ''
+        }
+        if (p==2 && document.getElementById("passwordInput").value=="again") {
+            p=p+1
+            document.getElementById("text").innerHTML = '<b><font color="red">Please try again later</font></b>'
+            document.getElementById("passwordInput").value = ''
+        }
+        if (p==3 && document.getElementById("passwordInput").value=="again later") {
+            document.write('<a href="https://tieba.baidu.com/f?ie=utf-8&kw=%E5%BC%B1%E6%99%BA&fr=search">你已通过考核，点击进入弱智吧</a>')
+        }
+    }
+  </script>
+</body>
+
+</html>
